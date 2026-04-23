@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gemini Chat Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Syne:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="chat-app">
+      <header class="chat-topbar">
+        <div class="status-wrap">
+          <span id="statusDot" class="status-dot"></span>
+          <span id="statusText">Ready</span>
+        </div>
+        <button id="clearChat" class="ghost-btn" type="button">Clear Chat</button>
+      </header>
+
+      <div id="messages" class="messages" aria-live="polite"></div>
+
+      <section class="composer-wrap">
+        <div class="file-tools">
+          <input id="fileInput" type="file" multiple hidden />
+          <button id="uploadButton" class="ghost-btn" type="button">Upload Files</button>
+          <p class="hint">Supported: text/code files and PDFs. Uploaded content is added as context to your prompt.</p>
+        </div>
+        <div id="fileList" class="file-list"></div>
+
+        <form id="chatForm" class="composer">
+          <textarea
+            id="messageInput"
+            rows="1"
+            placeholder="Ask coding questions, request complete apps, or specific files..."
+            required
+          ></textarea>
+          <button id="sendButton" type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <template id="messageTemplate">
+      <article class="message-row">
+        <div class="bubble"></div>
+      </article>
+    </template>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>
