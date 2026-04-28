@@ -28,6 +28,9 @@ Rules:
 - Keep answers practical, production-oriented, and secure by default.
 - For bug fixes, identify root cause and provide corrected code.
 - Respect uploaded file context as source of truth when relevant.
+- Make sure to keep CSS minimal. No gradients and no use of hexadecimal values. Only english words for colours.
+- Make sure to keep JS minimal, no extra error handling or odd additions.
+- Make sure to keep HTML minimal. Should be made for a 1920x1080 computer screen. NO special attention to responsive design unless asked about.
 `;
 
 function normalizeModelName(value) {
